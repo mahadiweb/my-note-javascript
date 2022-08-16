@@ -9,7 +9,7 @@ $.ajax({
 		username:"test", //Specifies a username to be used in an HTTP access authentication request
 		password:"test", //Specifies a password to be used in an HTTP access authentication request.
 		timeout: 3000 // sets timeout to 3 seconds.	The local timeout (in milliseconds) for the request
-		data:data:{"name":"name1","pass":"pass1"}, //way-2 $('#form').serialize(), for serialize form data into a array like name=value //way-3 "data1="+"value1"+"&data2="+"value2", //passing data with request
+		data:data:{"name":"name1","pass":"pass1"}, //way-2 $('#form').serialize() or serializeArray(), for serialize form data into a array like name=value //way-3 "data1="+"value1"+"&data2="+"value2", //passing data with request
 		beforeSend: function() {
 			document.getElementById("test").innerHTML = '<img src="loader.png" />'; //load image in button, you can do anything before request
 			request.setRequestHeader("Authorization", "authorizationToken"); //for send header
