@@ -21,3 +21,38 @@ postData('https://example.com/answer', { answer: 42 })
   .then((data) => {
     console.log(data); // JSON data parsed by `data.json()` call
   });
+
+
+
+fetch(myRequest)
+  .then((response) => {
+      // handle the response
+      return response.json();
+  })
+  .then((data) => {
+      /* process your data further */
+  })
+  .catch((error) => {
+      // handle the error
+      console.error(error)
+  });
+
+
+
+// fetch('url')
+      // .then(response => console.log(response.json()))
+      // .then(data => console.log(data))
+      // .catch(error => console.log(error));
+
+
+
+
+
+//Fetch is based on async and await. The example might be easier to understand like this:
+async function getText(file) { //load file
+  let x = await fetch(file);
+  let y = await x.text();
+  document.getElementById("demo").innerHTML = y;
+};
+
+getText("fetch_info.txt");
